@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.pedidadehoje.validadorandroid.ValidationActivity" >
+
+    <LinearLayout
+        android:id="@+id/success_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#725486">
+
+        <ImageView
+            android:src="@drawable/icon_success"
+            android:id="@+id/img_success_view"
+            android:layout_marginBottom="16dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="32dp"
+            android:text="Parabéns,"
+            android:textSize="35sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textColor="#cba7e5"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Seu voucher foi validado \n com sucesso!"/>
+
+        <Button
+            android:id="@+id/btn_validate_again"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:background="@color/background"
+            android:textColor="#FFF"
+            android:layout_marginTop="32dp"
+            android:text="Validar outro cupom"/>
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/action_bar_validation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/root"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <android.support.constraint.Guideline
+                android:id="@+id/validation_guideline_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/validation_guideline_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9" />
+
+            <TextView
+                android:id="@+id/txt_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Agora,"
+                android:textColor="@color/background"
+                android:textSize="30sp"
+                app:layout_constraintLeft_toLeftOf="@+id/validation_guideline_left"
+                app:layout_constraintRight_toRightOf="@+id/validation_guideline_right"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_digite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Digite os 8 dígitos que compõe\n o voucher do seu usúario"
+
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@+id/txt_now"
+                app:layout_constraintRight_toRightOf="@+id/txt_now"
+                app:layout_constraintTop_toBottomOf="@+id/txt_now" />
+
+            <ImageView
+                android:id="@+id/img_dot"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintLeft_toLeftOf="@+id/txt_digite"
+                app:layout_constraintRight_toRightOf="@+id/txt_digite"
+                app:layout_constraintTop_toBottomOf="@+id/txt_digite" />
+
+
+            <TextView
+                android:id="@+id/txt_first_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:text="Digite os primeiros 4 números"
+                android:textSize="20sp"
+                app:layout_constraintHorizontal_bias="0.571"
+                app:layout_constraintLeft_toLeftOf="@+id/validation_guideline_left"
+                app:layout_constraintRight_toRightOf="@+id/validation_guideline_right"
+                app:layout_constraintTop_toBottomOf="@+id/img_dot" />
+
+            <EditText
+                android:id="@+id/edt_first_number"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/field_border"
+                android:inputType="number"
+                android:gravity="center"
+                android:maxLength="4"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/validation_guideline_right"
+                app:layout_constraintStart_toStartOf="@+id/validation_guideline_left"
+                app:layout_constraintTop_toBottomOf="@+id/txt_first_number" />
+
+            <TextView
+                android:id="@+id/txt_last_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Digite os últimos 4 números"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@+id/validation_guideline_left"
+                app:layout_constraintRight_toRightOf="@+id/validation_guideline_right"
+                app:layout_constraintTop_toBottomOf="@+id/edt_first_number" />
+
+            <EditText
+                android:id="@+id/edt_last_number"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="12dp"
+                android:paddingLeft="30dp"
+                android:background="@drawable/field_border"
+                android:ems="4"
+                android:inputType="number"
+                android:maxEms="4"
+                android:textSize="30sp"
+                android:maxLength="4"
+                app:layout_constraintEnd_toStartOf="@+id/validation_guideline_right"
+                app:layout_constraintHorizontal_bias="0.464"
+                app:layout_constraintStart_toStartOf="@+id/validation_guideline_left"
+                app:layout_constraintTop_toBottomOf="@+id/txt_last_number" />
+
+            <Button
+                android:id="@+id/btn_validar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:layout_marginBottom="4dp"
+                android:background="#CECECE"
+                android:text="Validar"
+                android:textColor="#FFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/validation_guideline_right"
+                app:layout_constraintStart_toStartOf="@+id/validation_guideline_left"
+                app:layout_constraintTop_toBottomOf="@+id/edt_last_number"
+                app:layout_constraintVertical_bias="1.0" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>
