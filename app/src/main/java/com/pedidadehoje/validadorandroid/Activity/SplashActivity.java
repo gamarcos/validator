@@ -1,9 +1,11 @@
-package com.pedidadehoje.validadorandroid;
+package com.pedidadehoje.validadorandroid.Activity;
 
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.pedidadehoje.validadorandroid.R;
 
 public class SplashActivity extends AppCompatActivity {
 

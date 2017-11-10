@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.pedidadehoje.validadorandroid.ValidationActivity" >
+    tools:context="com.pedidadehoje.validadorandroid.Activity.Activity.Activity.ValidationActivity" >
 
     <LinearLayout
         android:id="@+id/success_view"
@@ -70,7 +70,7 @@
         android:fillViewport="true">
 
         <android.support.constraint.ConstraintLayout
-            android:id="@+id/root"
+            android:id="@+id/box_validation_root"
             android:layout_width="match_parent"
             android:layout_height="0dp">
 
@@ -141,8 +141,10 @@
                 android:layout_height="55dp"
                 android:layout_marginTop="12dp"
                 android:background="@drawable/field_border"
+                android:textColor="#CECECE"
                 android:inputType="number"
                 android:gravity="center"
+                android:drawableRight="@drawable/icon_success"
                 android:maxLength="4"
                 android:textSize="30sp"
                 app:layout_constraintEnd_toStartOf="@+id/validation_guideline_right"
@@ -165,15 +167,13 @@
                 android:layout_width="0dp"
                 android:layout_height="55dp"
                 android:layout_marginTop="12dp"
-                android:paddingLeft="30dp"
                 android:background="@drawable/field_border"
-                android:ems="4"
+                android:textColor="#CECECE"
                 android:inputType="number"
-                android:maxEms="4"
+                android:gravity="center"
                 android:textSize="30sp"
                 android:maxLength="4"
                 app:layout_constraintEnd_toStartOf="@+id/validation_guideline_right"
-                app:layout_constraintHorizontal_bias="0.464"
                 app:layout_constraintStart_toStartOf="@+id/validation_guideline_left"
                 app:layout_constraintTop_toBottomOf="@+id/txt_last_number" />
 
@@ -186,6 +186,7 @@
                 android:background="#CECECE"
                 android:text="Validar"
                 android:textColor="#FFF"
+                android:clickable="false"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/validation_guideline_right"
                 app:layout_constraintStart_toStartOf="@+id/validation_guideline_left"

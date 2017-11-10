@@ -5,7 +5,7 @@
     android:id="@+id/login_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.pedidadehoje.validadorandroid.LoginActivity">
+    tools:context="com.pedidadehoje.validadorandroid.Activity.Activity.Activity.LoginActivity">
 
     <ScrollView
         android:id="@+id/login_scroll"
@@ -38,13 +38,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.1" />
+                app:layout_constraintGuide_percent="0.08" />
 
             <LinearLayout
                 android:id="@+id/login_box_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
                 android:gravity="center"
                 android:orientation="horizontal"
                 app:layout_constraintLeft_toLeftOf="@id/guideline_login_left"
@@ -83,9 +82,8 @@
                 android:id="@+id/login_email"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="32dp"
                 android:paddingLeft="10dp"
-                android:background="@drawable/field_border"
                 android:textColorHint="@color/background"
                 android:gravity="center"
                 app:layout_constraintLeft_toLeftOf="@id/guideline_login_left"
@@ -96,7 +94,6 @@
                     android:id="@+id/input_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#00000000"
                     android:hint="Email"
                     android:textColorHint="@color/background"
                     android:inputType="textEmailAddress" />
@@ -107,7 +104,6 @@
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/field_border"
                 android:gravity="center"
                 android:paddingLeft="10dp"
                 app:layout_constraintLeft_toLeftOf="@id/guideline_login_left"
@@ -118,7 +114,6 @@
                     android:id="@+id/input_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#00000000"
                     android:hint="Senha"
                     android:textColorHint="@color/background"
                     android:inputType="textPassword" />
@@ -131,8 +126,8 @@
                 android:layout_marginTop="16dp"
                 android:text="Manter-me logado"
                 android:textColor="#C3C3C3"
-                android:scaleY="1.2"
-                android:scaleX="1.2"
+                android:scaleY="1"
+                android:scaleX="1"
                 android:layout_marginLeft="10dp"
                 android:buttonTint="@color/background"
                 android:textColorHighlight="@color/background"
@@ -144,7 +139,7 @@
                 android:id="@+id/btn_login"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/btn_border"
                 android:backgroundTint="#9a70b7"
                 android:text="Login"

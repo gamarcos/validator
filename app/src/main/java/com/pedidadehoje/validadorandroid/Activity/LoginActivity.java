@@ -1,10 +1,12 @@
-package com.pedidadehoje.validadorandroid;
+package com.pedidadehoje.validadorandroid.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.pedidadehoje.validadorandroid.R;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -28,6 +30,4 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(intent);
         }
     };
-
-
 }

@@ -9,19 +9,20 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
-        <activity android:name=".SplashActivity">
+        <activity android:name=".Activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".ChooseActivity" />
-        <activity android:name=".ValidationActivity"></activity>
+        <activity android:name=".Activity.LoginActivity" />
+        <activity android:name=".Activity.ChooseActivity" />
+        <activity android:name=".Activity.ValidationActivity" />
+        <activity android:name=".Activity.ScanActivity" />
     </application>
 
 </manifest>
