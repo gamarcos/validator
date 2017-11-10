@@ -21,8 +21,7 @@ import com.pedidadehoje.validadorandroid.R;
 
 
 public class ValidationActivity extends AppCompatActivity {
-
-
+    
     private Toolbar          toolbar;
     private Button           btn_validar;
     private EditText         last_number;
